@@ -10,6 +10,7 @@ import {
   Code2,
   Github,
   Linkedin,
+  Facebook,
   Link,
 } from 'lucide-react';
 
@@ -25,6 +26,7 @@ export const iconMap = {
   Code2,
   Github,
   Linkedin,
+  Facebook,
   Link,
 };
 
