@@ -8,10 +8,16 @@ export const contactInfo = {
       url: 'https://github.com/nasirabubakar-dev',
     },
     {
+      id: 'facebook',
+      label: 'Facebook',
+      icon: 'Facebook',
+      url: 'https://www.facebook.com/share/1C7HWcahVe/',
+    },
+    {
       id: 'linkedin',
       label: 'LinkedIn',
       icon: 'Linkedin',
-      url: 'https://www.linkedin.com/in/nasir-abubakar-dev',
+      url: 'https://www.linkedin.com/in/nasir-abubakar-7aa39a431',
     },
   ],
 };
