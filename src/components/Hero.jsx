@@ -1,6 +1,5 @@
-import { ArrowRight, ArrowDown, MapPin } from 'lucide-react';
+import { ArrowRight, ArrowDown } from 'lucide-react';
 import Reveal from './Reveal.jsx';
-import Headshot from '/headshot.png';
 
 export default function Hero() {
   return (
@@ -55,7 +54,7 @@ export default function Hero() {
 
             <Reveal delay={320}>
               <div className="mt-8 flex items-center gap-2 text-sm text-ink-secondary">
-                <span className="relative flex h-2.5 w-2.5">
+                <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
                   <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 motion-safe:animate-ping" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
                 </span>
@@ -64,17 +63,23 @@ export default function Hero() {
             </Reveal>
           </div>
 
-          {/* Image / placeholder */}
+          {/* Professional headshot */}
           <div className="order-1 md:order-2">
             <Reveal delay={120} className="flex justify-center md:justify-end">
               <div className="relative">
-                <div className="absolute -inset-3 rounded-[var(--radius-lg)] bg-gradient-to-br from-accent-primary/20 to-accent-secondary/15 blur-2xl" aria-hidden="true" />
+                <div
+                  className="absolute -inset-3 rounded-[var(--radius-lg)] bg-gradient-to-br from-accent-primary/20 to-accent-secondary/15 blur-2xl"
+                  aria-hidden="true"
+                />
                 <div className="relative h-56 w-56 overflow-hidden rounded-[var(--radius-lg)] border border-white/10 bg-base-surface sm:h-72 sm:w-72 md:h-80 md:w-80">
-                  {/* Replaceable placeholder */}
-                  <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-center">
-                    <img src={Headshot} alt="Nasir Abubakar" />
-                    <p className="text-xs font-medium text-ink-secondary">Headshot placeholder</p>
-                  </div>
+                  <img
+                    src="/headshot.png"
+                    alt="Portrait of Nasir Abubakar"
+                    className="h-full w-full object-cover object-center"
+                    width="640"
+                    height="640"
+                    fetchPriority="high"
+                  />
                 </div>
               </div>
             </Reveal>
