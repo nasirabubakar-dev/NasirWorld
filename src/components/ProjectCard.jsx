@@ -18,7 +18,7 @@ export default function ProjectCard({ project, featured = false }) {
         <img
           src={project.img}
           alt={`${project.name} website screenshot`}
-          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
           loading="lazy"
           decoding="async"
         />
