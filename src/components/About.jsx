@@ -5,17 +5,17 @@ const values = [
   {
     icon: Code2,
     title: 'Clean Code',
-    description: 'I write maintainable, well-structured code that is easy to understand and update.',
+    description: 'Write code that is organized, understandable, and easier to maintain and improve.',
   },
   {
     icon: Lightbulb,
     title: 'Problem-Solving',
-    description: 'I focus on understanding the real problem before jumping into implementation.',
+    description: 'Understand the problem first, then work toward a practical solution.',
   },
   {
     icon: Rocket,
-    title: 'Practical Projects',
-    description: 'I learn by building real projects, not just tutorials — every project teaches something.',
+    title: 'Learn by Building',
+    description: 'Use real projects to apply new knowledge, test ideas, and improve through experience.',
   },
 ];
 
@@ -26,7 +26,7 @@ export default function About() {
         <Reveal className="text-center">
           <span className="eyebrow">About Me</span>
           <h2 className="heading-lg text-ink-primary">
-            A developing developer who <span className="text-gradient">builds to learn</span>
+            A Developer Who <span className="text-gradient">Builds to Learn</span>
           </h2>
           <div className="section-line mt-6" />
         </Reveal>
@@ -34,18 +34,19 @@ export default function About() {
         <div className="mx-auto mt-12 max-w-3xl">
           <Reveal delay={100}>
             <p className="body-lg text-center">
-              My journey into web development started with curiosity — a desire to understand how
-              the websites I used every day actually worked. That curiosity grew into a commitment
-              to building useful digital products that are functional, responsive, and genuinely
-              pleasant to use.
+              My journey into web development began with curiosity and a desire to understand how the
+              websites I used every day actually worked. That curiosity grew into a habit of
+              learning through practical projects, experimenting with different technologies, and
+              turning ideas into working digital experiences.
             </p>
           </Reveal>
 
           <Reveal delay={180}>
             <p className="body-lg mt-5 text-center">
-              I learn by building. Every project I take on is an opportunity to solve a real
-              problem, refine my approach, and improve the quality of what I produce. My philosophy
-              is simple: build things that work, keep the code clean, and never stop improving.
+              I believe good development requires more than writing code. It takes patience, thoughtful
+              problem-solving, attention to detail, and a willingness to keep improving. Through
+              every project, I'm working to strengthen my skills and build websites that are useful,
+              responsive, and enjoyable to use.
             </p>
           </Reveal>
         </div>
