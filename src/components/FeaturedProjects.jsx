@@ -9,12 +9,12 @@ export default function FeaturedProjects() {
         <Reveal className="text-center">
           <span className="eyebrow">Featured Projects</span>
           <h2 className="heading-lg text-ink-primary">
-            Selected work I&apos;m <span className="text-gradient">proud of</span>
+            Projects That Turn Ideas Into <span className="text-gradient">Experiences</span>
           </h2>
           <div className="section-line mt-6" />
           <p className="body-lg mx-auto mt-5 max-w-2xl">
-            A look at the projects I&apos;ve built to sharpen my skills and demonstrate real,
-            functional frontend development.
+            These projects showcase how I approach website design, frontend development, and the
+            process of turning ideas into working web experiences.
           </p>
         </Reveal>
 
