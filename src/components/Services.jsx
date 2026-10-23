@@ -10,12 +10,13 @@ export default function Services() {
         <Reveal className="text-center">
           <span className="eyebrow">Services</span>
           <h2 className="heading-lg text-ink-primary">
-            How I can <span className="text-gradient">help you</span>
+            Web Development Services <span className="text-gradient">Built Around Your Goals</span>
           </h2>
           <div className="section-line mt-6" />
           <p className="body-lg mx-auto mt-5 max-w-2xl">
-            Frontend web development services focused on clean, responsive, and functional results.
-            Pricing is discussed after understanding your project scope.
+            I build responsive websites and interactive frontend experiences designed to communicate
+            clearly, work across screen sizes, and meet the needs of each project. Every project
+            starts with understanding what you need and agreeing on a suitable scope.
           </p>
         </Reveal>
 
