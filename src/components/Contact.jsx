@@ -10,12 +10,12 @@ export default function Contact() {
         <Reveal className="text-center">
           <span className="eyebrow">Contact</span>
           <h2 className="heading-lg text-ink-primary">
-            Let&apos;s build <span className="text-gradient">something together</span>
+            Let&apos;s Talk About <span className="text-gradient">What You&apos;re Building</span>
           </h2>
           <div className="section-line mt-6" />
           <p className="body-lg mx-auto mt-5 max-w-2xl">
-            Have a project in mind or a question about my services? I&apos;d love to hear from you.
-            Use any of the methods below to get in touch.
+            Have a project in mind or a question about my work? Reach out through one of the contact
+            methods below, and tell me a little about what you&apos;d like to build.
           </p>
         </Reveal>
 
@@ -76,8 +76,9 @@ export default function Contact() {
             </div>
 
             <p className="mt-6 text-center text-xs text-ink-secondary">
-              I typically respond within a day or two. Looking forward to hearing about your
-              project.
+              When reaching out about a project, include your main goal, the features you need, and any
+              important deadline. This will help me understand your requirements and respond more
+              effectively.
             </p>
           </div>
         </Reveal>
