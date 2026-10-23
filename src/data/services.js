@@ -3,6 +3,7 @@ export const services = [
     id: 'landing-page',
     icon: 'Layout',
     title: 'Landing Page Development',
+    price: '₦50,000',
     audience: 'Individuals, creators, startups, and businesses',
     problem:
       'A focused, single-page website designed to present a product, service, or campaign and guide visitors toward a clear next step.',
@@ -18,6 +19,7 @@ export const services = [
     id: 'business-website',
     icon: 'Building2',
     title: 'Business Website Development',
+    price: '₦150,000',
     audience: 'Businesses needing a professional online presence',
     problem:
       'A website that helps people understand what your business offers, find important information, and discover how to contact you.',
@@ -33,6 +35,7 @@ export const services = [
     id: 'react-app',
     icon: 'Code2',
     title: 'React Web Application Development',
+    price: '₦200,000',
     audience: 'Projects requiring interactive interfaces',
     problem:
       'Interactive frontend experiences built with React, using reusable components and responsive layouts to organize information and support user interactions.',
