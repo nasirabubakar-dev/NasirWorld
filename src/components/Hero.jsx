@@ -31,9 +31,9 @@ export default function Hero() {
 
             <Reveal delay={160}>
               <p className="body-lg mt-6 max-w-lg">
-                I&apos;m Nasir, a developing web developer focused on building practical, responsive
-                websites and web applications. I care about clean code, clear interfaces, and
-                getting the details right.
+                I&apos;m Nasir, a web developer focused on building practical, responsive websites and
+                interactive web applications. I enjoy turning ideas into working digital
+                experiences through thoughtful design, problem-solving, and continuous learning.
               </p>
             </Reveal>
 
@@ -58,7 +58,7 @@ export default function Hero() {
                   <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 motion-safe:animate-ping" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
                 </span>
-                Available for freelance projects
+                Open to suitable freelance enquiries
               </div>
             </Reveal>
           </div>
