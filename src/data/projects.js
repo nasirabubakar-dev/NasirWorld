@@ -7,7 +7,7 @@ export const featuredProjects = [
     name: 'Vereli',
     img: vereliScreenshot,
     description:
-      'A restaurant website demonstration built with React. Includes restaurant-focused sections such as Home, About, Menu, Gallery, Contact, and Order.',
+      'Vereli is a restaurant website demonstration built with React. It brings together restaurant-focused sections for presenting the brand, menu, gallery, contact information, and ordering experience in one responsive interface.',
     tags: ['React', 'Responsive Design', 'Component Architecture'],
     liveDemo: 'https://vereli.netlify.app',
     sourceCode: 'https://github.com/nasirabubakar-dev/vereli',
@@ -18,7 +18,7 @@ export const featuredProjects = [
     name: 'Finora',
     img: finoraScreenshot,
     description:
-      'A landing-page project demonstrating frontend design and implementation, focused on clean layout and a clear conversion path.',
+      'Finora is a product-focused landing page project built to demonstrate modern frontend development, clear content structure, and a polished web presentation.',
     tags: ['React', 'Landing Page', 'Frontend Design'],
     liveDemo: 'https://finora-landing-page.netlify.app',
     sourceCode: 'https://github.com/nasirabubakar-dev/Finora',
@@ -31,7 +31,7 @@ export const additionalProjects = [
     id: 'weather-app',
     name: 'Weather App',
     description:
-      'A responsive weather app that lets users search for a city and view its weather information. Built to practice API requests and asynchronous JavaScript.',
+      'A weather application that lets users search for a city and view weather information. Built to practise JavaScript and API integration.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Weather API'],
     liveDemo: 'https://weather-app-nasir.netlify.app',
     sourceCode: 'https://github.com/nasirabubakar-dev/weather-app',
@@ -42,7 +42,7 @@ export const additionalProjects = [
     id: 'rock-paper-scissors',
     name: 'Rock Paper Scissors',
     description:
-      'A browser game where you play against the computer, see each round’s result, and track the score while practicing JavaScript game logic.',
+      'A browser-based game where you play against the computer and track your score while practising JavaScript game logic.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Game Logic'],
     liveDemo: 'https://rps-game-nasir.netlify.app',
     sourceCode: 'https://github.com/nasirabubakar-dev/rock-paper-scissors',
@@ -53,7 +53,7 @@ export const additionalProjects = [
     id: 'todo-list',
     name: 'Todo List',
     description:
-      'A simple task manager for adding tasks, marking them complete, and deleting them. Built to practice DOM manipulation and event handling.',
+      'A simple task manager for adding tasks, marking them complete, and deleting them when they’re no longer needed.',
     tags: ['HTML', 'CSS', 'JavaScript', 'DOM'],
     liveDemo: 'https://todo-list-nasir.netlify.app',
     sourceCode: 'https://github.com/nasirabubakar-dev/todo-list',
@@ -64,7 +64,7 @@ export const additionalProjects = [
     id: 'password-generator',
     name: 'Random Password Generator',
     description:
-      'A small utility that generates random passwords with a selectable length and character types, demonstrating JavaScript strings and randomization.',
+      'A utility that generates random passwords using selectable lengths and character options.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Randomization'],
     liveDemo: 'https://password-generator-nasir.netlify.app',
     sourceCode: 'https://github.com/nasirabubakar-dev/password-generator',
