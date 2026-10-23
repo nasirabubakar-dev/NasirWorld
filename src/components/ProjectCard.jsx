@@ -10,15 +10,25 @@ export default function ProjectCard({ project, featured = false }) {
       {/* Visual preview */}
       <div
         className={`relative shrink-0 overflow-hidden bg-base-elevated ${
-          featured ? 'h-58 lg:h-auto lg:w-2/5' : 'h-40'
+          featured
+            ? 'aspect-[16/9] lg:aspect-auto lg:min-h-[16rem] lg:w-2/5'
+            : 'aspect-[16/9]'
         }`}
       >
-       <img src={project.img} alt="Projects Screenshot" className="flex h-full w-full flex-col items-center justify-center gap-3 text-center" />
-        </div>
-        <div className="absolute top-3 left-3">
-          <span className="rounded-full border border-white/10 bg-base-bg/80 px-3 py-1 text-xs font-medium text-ink-secondary backdrop-blur-sm">
-            {project.category}
-          </span>
+        <img
+          src={project.img}
+          alt={`${project.name} website screenshot`}
+          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          loading="lazy"
+          decoding="async"
+        />
+        {project.category && (
+          <div className="absolute left-3 top-3">
+            <span className="rounded-full border border-white/10 bg-base-bg/85 px-3 py-1 text-xs font-medium text-ink-secondary backdrop-blur-sm">
+              {project.category}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Content */}
@@ -48,7 +58,7 @@ export default function ProjectCard({ project, featured = false }) {
             rel="noopener noreferrer"
             className="btn-primary flex-1 group/btn"
           >
-            <ExternalLink size={16} />
+            <ExternalLink size={16} aria-hidden="true" />
             Live Demo
           </a>
           <a
@@ -57,7 +67,7 @@ export default function ProjectCard({ project, featured = false }) {
             rel="noopener noreferrer"
             className="btn-secondary flex-1"
           >
-            <Github size={16} />
+            <Github size={16} aria-hidden="true" />
             Source Code
           </a>
         </div>
