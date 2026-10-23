@@ -5,13 +5,13 @@ export const services = [
     title: 'Landing Page Development',
     audience: 'Individuals, creators, startups, and businesses',
     problem:
-      'You need a focused, single-page presence to present an offer, product, service, or campaign — without the overhead of a multi-page site.',
+      'A focused, single-page website designed to present a product, service, or campaign and guide visitors toward a clear next step.',
     deliverables: [
       'Responsive single-page layout',
-      'Clear call-to-action placement',
+      'Clear calls to action',
       'Content sections for your offer',
-      'Mobile-optimized design',
-      'Clean, modern visual presentation',
+      'Mobile-friendly presentation',
+      'Clean, modern visual design',
     ],
   },
   {
@@ -20,10 +20,10 @@ export const services = [
     title: 'Business Website Development',
     audience: 'Businesses needing a professional online presence',
     problem:
-      'You need a credible web presence with clear information about what your business offers and how people can reach you.',
+      'A website that helps people understand what your business offers, find important information, and discover how to contact you.',
     deliverables: [
-      'Responsive multi-section layouts',
-      'Business information presentation',
+      'Responsive website layout',
+      'Business information sections',
       'Service or offering sections',
       'Clear navigation structure',
       'Contact links and calls to action',
@@ -35,13 +35,13 @@ export const services = [
     title: 'React Web Application Development',
     audience: 'Projects requiring interactive interfaces',
     problem:
-      'You need an interactive web interface with reusable components and a responsive user experience built on modern frontend tooling.',
+      'Interactive frontend experiences built with React, using reusable components and responsive layouts to organize information and support user interactions.',
     deliverables: [
-      'Component-based React architecture',
+      'Component-based React interfaces',
       'Interactive UI elements',
       'Responsive layout implementation',
       'State-driven interfaces',
-      'Frontend functionality and integration',
+      'Frontend functionality appropriate to the agreed scope',
     ],
   },
 ];
