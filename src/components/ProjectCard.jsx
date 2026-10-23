@@ -77,7 +77,7 @@ export default function ProjectCard({ project, featured = false }) {
             className="btn-primary flex-1 group/btn"
           >
             <ExternalLink size={16} aria-hidden="true" />
-            Live Demo
+            {project.id === 'rock-paper-scissors' ? 'Play Game' : 'Live Demo'}
           </a>
           <a
             href={project.sourceCode}
