@@ -1,6 +1,15 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { CloudSun, ExternalLink, Gamepad2, Github, KeyRound, ListTodo } from 'lucide-react';
+
+const visualIcons = {
+  weather: CloudSun,
+  game: Gamepad2,
+  todo: ListTodo,
+  password: KeyRound,
+};
 
 export default function ProjectCard({ project, featured = false }) {
+  const VisualIcon = visualIcons[project.visual];
+
   return (
     <article
       className={`group flex flex-col overflow-hidden rounded-[var(--radius)] border border-white/10 bg-base-surface transition-all duration-300 ease-smooth hover:border-accent-primary/40 hover:shadow-xl hover:shadow-black/30 ${
@@ -15,13 +24,22 @@ export default function ProjectCard({ project, featured = false }) {
             : 'aspect-[16/9]'
         }`}
       >
-        <img
-          src={project.img}
-          alt={`${project.name} website screenshot`}
-          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-          loading="lazy"
-          decoding="async"
-        />
+        {project.img ? (
+          <img
+            src={project.img}
+            alt={`${project.name} website screenshot`}
+            className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-accent-primary/20 via-base-elevated to-accent-secondary/10 text-accent-primary">
+            {VisualIcon && <VisualIcon size={42} strokeWidth={1.5} aria-hidden="true" />}
+            <span className="px-4 text-center text-sm font-semibold tracking-wide text-ink-secondary">
+              {project.name}
+            </span>
+          </div>
+        )}
         {project.category && (
           <div className="absolute left-3 top-3">
             <span className="rounded-full border border-white/10 bg-base-bg/85 px-3 py-1 text-xs font-medium text-ink-secondary backdrop-blur-sm">
