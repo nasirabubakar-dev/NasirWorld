@@ -33,7 +33,7 @@ export default function AdditionalProjects() {
         <Reveal className="text-center">
           <span className="eyebrow">More Projects</span>
           <h2 className="heading-md text-ink-primary">
-            Additional <span className="text-gradient">mini-projects</span>
+            More Projects. <span className="text-gradient">More Things to Explore.</span>
           </h2>
         </Reveal>
 
