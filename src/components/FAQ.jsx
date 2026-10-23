@@ -16,12 +16,12 @@ export default function FAQ() {
         <Reveal className="text-center">
           <span className="eyebrow">FAQ</span>
           <h2 className="heading-lg text-ink-primary">
-            Frequently asked <span className="text-gradient">questions</span>
+            Questions <span className="text-gradient">Before We Get Started</span>
           </h2>
           <div className="section-line mt-6" />
           <p className="body-lg mx-auto mt-5 max-w-2xl">
-            Common questions potential clients ask before starting a project. If yours isn&apos;t
-            here, feel free to reach out.
+            Here are answers to common questions about my services, development process, and projects.
+            If you have another question, feel free to get in touch.
           </p>
         </Reveal>
 
