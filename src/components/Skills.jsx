@@ -9,12 +9,12 @@ export default function Skills() {
         <Reveal className="text-center">
           <span className="eyebrow">Skills</span>
           <h2 className="heading-lg text-ink-primary">
-            What I work with <span className="text-gradient">day to day</span>
+            The Tools I Use and the <span className="text-gradient">Skills I&apos;m Building</span>
           </h2>
           <div className="section-line mt-6" />
           <p className="body-lg mx-auto mt-5 max-w-2xl">
-            An honest look at the tools and technologies I use, along with the ones I&apos;m
-            actively learning.
+            Here are the technologies I use in my projects, the tools that support my workflow, and
+            the areas I&apos;m actively learning as I grow as a developer.
           </p>
         </Reveal>
 
