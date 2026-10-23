@@ -45,7 +45,7 @@ export const faqs = [
     id: 'faq-8',
     question: 'Can I request changes during development?',
     answer:
-      'We'll agree on the project requirements and revision arrangements before work begins. Clear communication will help keep expectations aligned.',
+      "We'll agree on the project requirements and revision arrangements before work begins. Clear communication will help keep expectations aligned.",
   },
   {
     id: 'faq-9',
