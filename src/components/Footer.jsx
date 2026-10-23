@@ -19,8 +19,8 @@ export default function Footer() {
               <span className="text-accent-secondary">World</span>
             </a>
             <p className="mt-3 text-sm leading-relaxed text-ink-secondary">
-              Building clean, responsive websites and web applications with a focus on practical,
-              functional results.
+              Building responsive websites and interactive frontend experiences through practical
+              problem-solving, thoughtful design, and continuous learning.
             </p>
           </div>
 
