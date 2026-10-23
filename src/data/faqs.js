@@ -3,7 +3,7 @@ export const faqs = [
     id: 'faq-1',
     question: 'What types of websites do you build?',
     answer:
-      'I build landing pages, business websites, and React-based frontend experiences, depending on the project's requirements and agreed scope.',
+      "I build landing pages, business websites, and React-based frontend experiences, depending on the project's requirements and agreed scope.",
   },
   {
     id: 'faq-2',
@@ -33,7 +33,7 @@ export const faqs = [
     id: 'faq-6',
     question: 'How long does it take to build a website?',
     answer:
-      'The timeline depends on the project's size, complexity, and content. I'll provide an estimated delivery time after understanding your requirements.',
+      "The timeline depends on the project's size, complexity, and content. I'll provide an estimated delivery time after understanding your requirements.",
   },
   {
     id: 'faq-7',
