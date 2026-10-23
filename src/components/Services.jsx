@@ -8,7 +8,7 @@ export default function Services() {
     <section id="services" className="section-pad">
       <div className="container-narrow">
         <Reveal className="text-center">
-          <span className="eyebrow">Services</span>
+          <span className="eyebrow">Services & Pricing</span>
           <h2 className="heading-lg text-ink-primary">
             Web Development Services <span className="text-gradient">Built Around Your Goals</span>
           </h2>
@@ -32,6 +32,15 @@ export default function Services() {
 
                   <h3 className="mb-2 text-xl font-bold text-ink-primary">{service.title}</h3>
 
+                  <div className="mb-4">
+                    <p className="text-xs font-medium uppercase tracking-wide text-ink-secondary">
+                      Starting at
+                    </p>
+                    <p className="mt-1 text-3xl font-extrabold tracking-tight text-gradient">
+                      {service.price}
+                    </p>
+                  </div>
+
                   <p className="mb-3 text-xs font-medium uppercase tracking-wide text-accent-secondary">
                     {service.audience}
                   </p>
@@ -40,7 +49,7 @@ export default function Services() {
                     {service.problem}
                   </p>
 
-                  <ul className="mb-6 space-y-2.5 flex-1">
+                  <ul className="mb-6 flex-1 space-y-2.5">
                     {service.deliverables.map((item) => (
                       <li key={item} className="flex items-start gap-2.5 text-sm text-ink-primary">
                         <Check
@@ -52,11 +61,8 @@ export default function Services() {
                     ))}
                   </ul>
 
-                  <a
-                    href="#contact"
-                    className="btn-secondary group w-full"
-                  >
-                    Enquire about this service
+                  <a href="#contact" className="btn-secondary group w-full">
+                    Discuss your project
                     <ArrowRight
                       size={16}
                       className="transition-transform duration-200 group-hover:translate-x-1"
@@ -67,6 +73,25 @@ export default function Services() {
             );
           })}
         </div>
+
+        <Reveal className="mx-auto mt-8 max-w-3xl text-center">
+          <p className="text-sm leading-relaxed text-ink-secondary">
+            These are starting prices. Your final quote depends on the project scope and agreed
+            features. Domain registration, paid hosting, premium tools, and third-party services
+            are separate unless agreed beforehand. Backend systems and advanced integrations are
+            scoped and quoted separately.
+          </p>
+          <p className="mt-5 text-base font-medium text-ink-primary">
+            Have a different project in mind?
+          </p>
+          <a href="#contact" className="btn-primary group mt-4">
+            Let&apos;s discuss your project
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-200 group-hover:translate-x-1"
+            />
+          </a>
+        </Reveal>
       </div>
     </section>
   );
