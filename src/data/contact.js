@@ -25,6 +25,12 @@ export const contactInfo = {
       icon: 'Instagram',
       url: 'https://www.instagram.com/nasir_abubakar.dev/',
     },
+    {
+      id: 'x',
+      label: 'X · @nasirabakar_dev',
+      icon: 'X',
+      url: 'https://x.com/nasirabakar_dev',
+    },
   ],
 };
 
