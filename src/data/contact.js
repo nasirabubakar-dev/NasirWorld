@@ -19,6 +19,12 @@ export const contactInfo = {
       icon: 'Linkedin',
       url: 'https://www.linkedin.com/in/nasir-abubakar-7aa39a431',
     },
+    {
+      id: 'instagram',
+      label: '@nasir_abubakar.dev',
+      icon: 'Instagram',
+      url: 'https://www.instagram.com/nasir_abubakar.dev/',
+    },
   ],
 };
 
