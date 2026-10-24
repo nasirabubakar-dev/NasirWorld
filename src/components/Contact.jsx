@@ -63,7 +63,9 @@ export default function Contact() {
                         {social.label}
                       </p>
                       <p className="truncate text-sm font-semibold text-ink-primary">
-                        {social.url.replace(/^https?:\/\//, '')}
+                        {social.id === 'whatsapp'
+                          ? 'Start a conversation'
+                          : social.url.replace(/^https?:\/\//, '')}
                       </p>
                     </div>
                     <ArrowUpRight
