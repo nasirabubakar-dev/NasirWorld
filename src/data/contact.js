@@ -31,6 +31,12 @@ export const contactInfo = {
       icon: 'X',
       url: 'https://x.com/nasirabakar_dev',
     },
+    {
+      id: 'whatsapp',
+      label: 'WhatsApp',
+      icon: 'MessageCircle',
+      url: 'https://wa.me/2349014847725?text=Hello%20Nasir%21%20I%20visited%20your%20portfolio%20and%20I%27m%20interested%20in%20your%20web%20development%20services.',
+    },
   ],
 };
 
