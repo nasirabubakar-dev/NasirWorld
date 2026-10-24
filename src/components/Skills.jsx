@@ -13,22 +13,18 @@ export default function Skills() {
           </h2>
           <div className="section-line mt-6" />
           <p className="body-lg mx-auto mt-5 max-w-2xl">
-            Here are the technologies I use in my projects, the tools that support my workflow, and
-            the areas I&apos;m actively learning as I grow as a developer.
+            Here are the technologies I use to build projects, the tools that support my workflow,
+            and the areas I&apos;m actively learning as I continue to grow as a developer.
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {skillCategories.map((category, catIndex) => {
             const Icon = getIcon(category.icon);
             const isLearning = category.id === 'learning';
 
             return (
-              <Reveal
-                key={category.id}
-                delay={(catIndex % 3) * 100}
-                className={isLearning ? 'sm:col-span-2 lg:col-span-1' : ''}
-              >
+              <Reveal key={category.id} delay={(catIndex % 2) * 100}>
                 <div className="card card-hover h-full">
                   <div className="mb-5 flex items-center gap-3">
                     <div className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-sm)] bg-accent-primary/10 text-accent-primary">
@@ -51,7 +47,7 @@ export default function Skills() {
 
                   {isLearning && (
                     <p className="mt-4 rounded-[var(--radius-sm)] bg-accent-secondary/10 px-3 py-2 text-xs font-medium text-accent-secondary">
-                      Actively learning — not yet production expertise
+                      In progress — building knowledge through study and practice
                     </p>
                   )}
                 </div>
