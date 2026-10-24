@@ -11,6 +11,7 @@ import {
   Github,
   Linkedin,
   Facebook,
+  Instagram,
   Link,
 } from 'lucide-react';
 
@@ -27,6 +28,7 @@ export const iconMap = {
   Github,
   Linkedin,
   Facebook,
+  Instagram,
   Link,
 };
 
