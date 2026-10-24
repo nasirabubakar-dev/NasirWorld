@@ -18,22 +18,23 @@ export default function Hero() {
           {/* Text content */}
           <div className="order-2 md:order-1">
             <Reveal>
-              <span className="eyebrow">DEVELOPER, BUILDER, LIFELONG LEARNER</span>
+              <span className="eyebrow">DEVELOPER · CURIOUS BUILDER · LIFELONG LEARNER</span>
             </Reveal>
 
             <Reveal delay={80}>
               <h1 className="heading-xl text-ink-primary">
-                Building digital, <br className="hidden sm:block" />
-                <span className="text-gradient">experiences</span> <br className="hidden sm:block" />
-                that make a difference.
+                Building Digital <br className="hidden sm:block" />
+                <span className="text-gradient">Experiences,</span> <br className="hidden sm:block" />
+                Driven by Curiosity.
               </h1>
             </Reveal>
 
             <Reveal delay={160}>
               <p className="body-lg mt-6 max-w-lg">
-                I&apos;m Nasir, a web developer focused on building practical, responsive websites and
-                interactive web applications. I enjoy turning ideas into working digital
-                experiences through thoughtful design, problem-solving, and continuous learning.
+                I&apos;m Nasir, a web developer who enjoys understanding how things work and turning
+                ideas into practical digital experiences. I build responsive websites and
+                interactive applications while continuously learning, solving problems, and
+                strengthening my skills.
               </p>
             </Reveal>
 
