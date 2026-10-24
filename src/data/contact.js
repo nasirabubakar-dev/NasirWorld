@@ -11,7 +11,7 @@ export const contactInfo = {
       id: 'facebook',
       label: 'Facebook',
       icon: 'Facebook',
-      url: 'https://www.facebook.com/share/1C7HWcahVe/',
+      url: 'https://www.facebook.com/share/1DtoBMvmh1/',
     },
     {
       id: 'linkedin',
