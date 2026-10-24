@@ -21,13 +21,13 @@ export const contactInfo = {
     },
     {
       id: 'instagram',
-      label: '@nasir_abubakar.dev',
+      label: 'Instagram',
       icon: 'Instagram',
       url: 'https://www.instagram.com/nasir_abubakar.dev/',
     },
     {
       id: 'x',
-      label: 'X · @nasirabakar_dev',
+      label: 'X',
       icon: 'X',
       url: 'https://x.com/nasirabakar_dev',
     },
