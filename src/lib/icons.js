@@ -13,6 +13,7 @@ import {
   Linkedin,
   Facebook,
   Instagram,
+  MessageCircle,
   Link,
 } from 'lucide-react';
 
@@ -49,6 +50,7 @@ export const iconMap = {
   Linkedin,
   Facebook,
   Instagram,
+  MessageCircle,
   X: XBrand,
   Link,
 };
