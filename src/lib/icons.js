@@ -16,6 +16,32 @@ import {
   MessageCircle,
   Link,
 } from 'lucide-react';
+import { siTiktok, siYoutube } from 'simple-icons';
+
+// Custom SVG brand icon helper for Simple Icons paths.
+function SimpleIcon({ icon, size = 24, ...props }) {
+  return createElement(
+    'svg',
+    {
+      xmlns: 'http://www.w3.org/2000/svg',
+      width: size,
+      height: size,
+      viewBox: '0 0 24 24',
+      fill: 'currentColor',
+      'aria-hidden': true,
+      ...props,
+    },
+    createElement('path', { d: icon.path }),
+  );
+}
+
+function TikTokBrand(props) {
+  return createElement(SimpleIcon, { icon: siTiktok, ...props });
+}
+
+function YouTubeBrand(props) {
+  return createElement(SimpleIcon, { icon: siYoutube, ...props });
+}
 
 // Custom SVG for the X brand logo; Lucide's X icon is a generic close symbol.
 function XBrand({ size = 24, ...props }) {
@@ -51,6 +77,8 @@ export const iconMap = {
   Facebook,
   Instagram,
   MessageCircle,
+  Youtube: YouTubeBrand,
+  Tiktok: TikTokBrand,
   X: XBrand,
   Link,
 };
