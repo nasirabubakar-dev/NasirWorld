@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, ArrowUpRight, Send } from 'lucide-react';
+import { Mail, ArrowUpRight, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import Reveal from './Reveal.jsx';
 import { getIcon } from '../lib/icons.js';
 import { contactInfo } from '../data/contact.js';
@@ -24,16 +24,21 @@ export default function Contact() {
         body: JSON.stringify(payload),
       });
 
-      const result = await response.json();
+      let result = {};
+      try {
+        result = await response.json();
+      } catch {
+        result = {};
+      }
 
       if (!response.ok) {
-        throw new Error(result.error || 'Unable to send your message.');
+        throw new Error(result.error || 'Unable to send your message. Please try again.');
       }
 
       form.reset();
       setStatus({
         type: 'success',
-        message: 'Thanks! Your project inquiry has been received.',
+        message: 'Message sent successfully. I’ll get back to you as soon as I can.',
       });
     } catch (error) {
       setStatus({
@@ -62,7 +67,7 @@ export default function Contact() {
 
         <Reveal delay={120}>
           <div className="mx-auto mt-12 max-w-2xl space-y-8">
-            <form onSubmit={handleSubmit} className="card-elevated space-y-5">
+            <form onSubmit={handleSubmit} className="card-elevated space-y-5" noValidate>
               <div>
                 <p className="text-sm font-semibold text-ink-primary">Project inquiry</p>
                 <p className="mt-1 text-sm text-ink-secondary">
@@ -155,10 +160,7 @@ export default function Contact() {
                 />
               </label>
 
-              <div
-                aria-hidden="true"
-                className="absolute -left-[9999px] h-px w-px overflow-hidden"
-              >
+              <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
                 <label>
                   Website
                   <input
@@ -170,23 +172,39 @@ export default function Contact() {
                 </label>
               </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius-sm)] bg-accent-primary px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
-              >
-                <Send size={17} />
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  aria-busy={isSubmitting}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius-sm)] bg-accent-primary px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                >
+                  <Send size={17} />
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+
+                <span className="text-xs text-ink-secondary">
+                  Your message is sent securely through the contact form.
+                </span>
+              </div>
 
               {status.message && (
-                <p
-                  className={status.type === 'success' ? 'text-sm text-accent-secondary' : 'text-sm text-red-400'}
-                  role="status"
+                <div
+                  className={
+                    status.type === 'success'
+                      ? 'flex items-start gap-3 rounded-[var(--radius-sm)] border border-accent-secondary/20 bg-accent-secondary/10 px-4 py-3 text-sm text-accent-secondary'
+                      : 'flex items-start gap-3 rounded-[var(--radius-sm)] border border-red-400/20 bg-red-400/10 px-4 py-3 text-sm text-red-300'
+                  }
+                  role={status.type === 'error' ? 'alert' : 'status'}
                   aria-live="polite"
                 >
-                  {status.message}
-                </p>
+                  {status.type === 'success' ? (
+                    <CheckCircle2 size={18} className="mt-0.5 shrink-0" />
+                  ) : (
+                    <AlertCircle size={18} className="mt-0.5 shrink-0" />
+                  )}
+                  <span>{status.message}</span>
+                </div>
               )}
             </form>
 
