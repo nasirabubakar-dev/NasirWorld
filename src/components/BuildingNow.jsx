@@ -1,17 +1,15 @@
-import { ArrowUpRight, Box, Sparkles } from 'lucide-react';
+import { Box, Sparkles } from 'lucide-react';
 import Reveal from './Reveal.jsx';
 
 const currentWork = [
   {
     id: '3d-studio',
     icon: Box,
-    status: 'Active project',
+    status: 'In progress',
     title: 'NASIRWORLD 3D Studio',
     description:
-      'A browser-based 3D production workspace built with Three.js. I’m developing a repeatable workflow for character scenes, environments, camera work, lighting, animation, and episode production.',
+      'A browser-based 3D production workspace built with Three.js. I’m developing a repeatable workflow for character scenes, environments, camera work, lighting, animation, and episode production. The studio interface is still being built.',
     focus: ['Three.js', '3D scene construction', 'Character animation', 'Production workflow'],
-    href: 'https://nasirworld-3d-studio.vercel.app/',
-    linkLabel: 'Explore the studio',
   },
   {
     id: 'ai-products',
@@ -54,12 +52,6 @@ export default function BuildingNow() {
                   <div className="mt-5 flex flex-wrap gap-2">
                     {item.focus.map((tag) => <span key={tag} className="tag">{tag}</span>)}
                   </div>
-                  {item.href && (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="btn-secondary mt-6 w-full">
-                      {item.linkLabel}
-                      <ArrowUpRight size={16} />
-                    </a>
-                  )}
                 </article>
               </Reveal>
             );
