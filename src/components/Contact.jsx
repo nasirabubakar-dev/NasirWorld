@@ -5,11 +5,44 @@ import { getIcon } from '../lib/icons.js';
 import { contactInfo } from '../data/contact.js';
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    setSubmitted(true);
+    setStatus({ type: '', message: '' });
+    setIsSubmitting(true);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Unable to send your message.');
+      }
+
+      form.reset();
+      setStatus({
+        type: 'success',
+        message: 'Thanks! Your project inquiry has been received.',
+      });
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: error.message || 'Something went wrong. Please try again.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -114,6 +147,7 @@ export default function Contact() {
                   required
                   rows="6"
                   minLength="20"
+                  maxLength="5000"
                   placeholder="What are you trying to build, what problem should it solve, and are there any important requirements?"
                   className="w-full resize-y rounded-[var(--radius-sm)] border border-white/10 bg-base-surface px-4 py-3 text-sm text-ink-primary outline-none transition-colors placeholder:text-ink-secondary/60 focus:border-accent-primary/50"
                 />
@@ -121,15 +155,19 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius-sm)] bg-accent-primary px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-primary/90 sm:w-auto"
+                disabled={isSubmitting}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius-sm)] bg-accent-primary px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
               >
                 <Send size={17} />
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
 
-              {submitted && (
-                <p className="text-sm text-accent-secondary" role="status">
-                  Form UI is working. Next step: connect this form to the contact API and email delivery.
+              {status.message && (
+                <p
+                  className={status.type === 'success' ? 'text-sm text-accent-secondary' : 'text-sm text-red-400'}
+                  role="status"
+                >
+                  {status.message}
                 </p>
               )}
             </form>
