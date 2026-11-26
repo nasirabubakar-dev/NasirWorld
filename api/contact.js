@@ -1,4 +1,25 @@
 const MAX_MESSAGE_LENGTH = 5000;
+const MAX_NAME_LENGTH = 100;
+const MAX_EMAIL_LENGTH = 254;
+const MAX_PROJECT_TYPE_LENGTH = 50;
+const MAX_BUDGET_LENGTH = 50;
+const MIN_MESSAGE_LENGTH = 20;
+
+const ALLOWED_PROJECT_TYPES = new Set([
+  'landing-page',
+  'business-website',
+  'web-app',
+  'other',
+]);
+
+const ALLOWED_BUDGETS = new Set([
+  '',
+  'under-75k',
+  '75k-150k',
+  '150k-250k',
+  '250k-plus',
+  'not-sure',
+]);
 
 function getString(value) {
   return typeof value === 'string' ? value.trim() : '';
@@ -17,6 +38,25 @@ function escapeHtml(value) {
     .replaceAll("'", '&#039;');
 }
 
+function getClientIp(req) {
+  const forwarded = req.headers['x-forwarded-for'];
+  if (typeof forwarded === 'string' && forwarded.length > 0) {
+    return forwarded.split(',')[0].trim();
+  }
+
+  return req.socket?.remoteAddress || 'unknown';
+}
+
+function hasSuspiciousContent(values) {
+  const combined = values.join(' ').toLowerCase();
+
+  const urlCount = (combined.match(/https?:\/\//g) || []).length;
+  const repeatedLinks = urlCount >= 3;
+  const repeatedWords = /(.{1,30})\1{3,}/.test(combined);
+
+  return repeatedLinks || repeatedWords;
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -29,11 +69,32 @@ export default async function handler(req, res) {
   const projectType = getString(body.projectType);
   const budget = getString(body.budget);
   const message = getString(body.message);
+  const honeypot = getString(body.website);
+
+  // Hidden honeypot field: real visitors should never fill this.
+  if (honeypot) {
+    return res.status(200).json({
+      success: true,
+      message: 'Your message has been sent successfully.',
+    });
+  }
 
   if (!name || !email || !projectType || !message) {
     return res.status(400).json({
       success: false,
       error: 'Name, email, project type, and message are required.',
+    });
+  }
+
+  if (
+    name.length > MAX_NAME_LENGTH ||
+    email.length > MAX_EMAIL_LENGTH ||
+    projectType.length > MAX_PROJECT_TYPE_LENGTH ||
+    budget.length > MAX_BUDGET_LENGTH
+  ) {
+    return res.status(400).json({
+      success: false,
+      error: 'One or more fields are too long.',
     });
   }
 
@@ -44,7 +105,21 @@ export default async function handler(req, res) {
     });
   }
 
-  if (message.length < 20) {
+  if (!ALLOWED_PROJECT_TYPES.has(projectType)) {
+    return res.status(400).json({
+      success: false,
+      error: 'Please select a valid project type.',
+    });
+  }
+
+  if (!ALLOWED_BUDGETS.has(budget)) {
+    return res.status(400).json({
+      success: false,
+      error: 'Please select a valid budget range.',
+    });
+  }
+
+  if (message.length < MIN_MESSAGE_LENGTH) {
     return res.status(400).json({
       success: false,
       error: 'Message must be at least 20 characters long.',
@@ -55,6 +130,13 @@ export default async function handler(req, res) {
     return res.status(400).json({
       success: false,
       error: 'Message is too long.',
+    });
+  }
+
+  if (hasSuspiciousContent([name, email, message])) {
+    return res.status(400).json({
+      success: false,
+      error: 'Please remove repeated or suspicious content and try again.',
     });
   }
 
