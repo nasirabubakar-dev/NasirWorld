@@ -6,6 +6,8 @@ export const contactInfo = {
     { id: 'linkedin', label: 'LinkedIn', icon: 'Linkedin', url: 'https://www.linkedin.com/in/nasir-abubakar-7aa39a431' },
     { id: 'instagram', label: 'Instagram', icon: 'Instagram', url: 'https://www.instagram.com/nasir_abubakar.dev/' },
     { id: 'x', label: 'X', icon: 'X', url: 'https://x.com/nasirabakar_dev' },
+    { id: 'youtube', label: 'YouTube', icon: 'Youtube', url: 'https://www.youtube.com/@NasirADev' },
+    { id: 'tiktok', label: 'TikTok', icon: 'Music2', url: 'https://www.tiktok.com/@thenasirdev' },
     {
       id: 'whatsapp',
       label: 'WhatsApp',
