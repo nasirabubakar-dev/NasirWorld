@@ -79,6 +79,7 @@ export default function Contact() {
                     type="text"
                     name="name"
                     required
+                    maxLength="100"
                     autoComplete="name"
                     placeholder="Your name"
                     className="w-full rounded-[var(--radius-sm)] border border-white/10 bg-base-surface px-4 py-3 text-sm text-ink-primary outline-none transition-colors placeholder:text-ink-secondary/60 focus:border-accent-primary/50"
@@ -93,6 +94,7 @@ export default function Contact() {
                     type="email"
                     name="email"
                     required
+                    maxLength="254"
                     autoComplete="email"
                     placeholder="you@example.com"
                     className="w-full rounded-[var(--radius-sm)] border border-white/10 bg-base-surface px-4 py-3 text-sm text-ink-primary outline-none transition-colors placeholder:text-ink-secondary/60 focus:border-accent-primary/50"
@@ -153,6 +155,21 @@ export default function Contact() {
                 />
               </label>
 
+              <div
+                aria-hidden="true"
+                className="absolute -left-[9999px] h-px w-px overflow-hidden"
+              >
+                <label>
+                  Website
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex="-1"
+                    autoComplete="off"
+                  />
+                </label>
+              </div>
+
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -166,6 +183,7 @@ export default function Contact() {
                 <p
                   className={status.type === 'success' ? 'text-sm text-accent-secondary' : 'text-sm text-red-400'}
                   role="status"
+                  aria-live="polite"
                 >
                   {status.message}
                 </p>
