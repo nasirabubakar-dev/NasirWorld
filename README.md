@@ -1,74 +1,69 @@
-# NasirWorld 🌐
+# NasirWorld
 
-A modern, responsive personal portfolio built with React. NasirWorld presents my projects, technical skills, and web development services in one place.
+Personal portfolio of **Nasir Abubakar — Full-Stack Developer, Problem-Solver & AI Product Builder in Progress**.
 
-🌍 **Live Portfolio:** https://nasir-world.vercel.app/
+Live Portfolio: https://nasir-world.vercel.app/
 
-## ✨ Features
+NasirWorld brings together selected web projects, development services, technical skills, and independent product experiments. The portfolio is built with React and Vite, with an emphasis on clear project storytelling and honest representation of work in progress.
 
-- Responsive portfolio layout for different screen sizes
-- Introduction and About section
-- Technical skills showcase
-- Featured projects
-- Web development services
-- Frequently Asked Questions (FAQ)
-- Contact section
-- Reusable React components
+## Features
 
-## 🛠️ Built With
+- Responsive portfolio layout
+- Updated full-stack developer positioning
+- About section focused on problem-solving and systems thinking
+- Skills grouped by frontend, backend, data, tools, and emerging technology
+- Featured project case notes covering goals, approach, and key features
+- Earlier practice projects
+- Current independent work, including NASIRWORLD 3D Studio
+- Web development services and starting prices
+- FAQ and contact links
+- Reusable React components and data-driven sections
+- Reduced-motion support
+
+## Built With
 
 - React
 - JavaScript
 - Vite
-- HTML
-- CSS
 - Tailwind CSS
+- Lucide React
 
-## 🚀 Run Locally
+## Run Locally
 
-To run the project on your computer:
-
-1. **Clone the repository**
-   ```bash
+1. Clone the repository:
    git clone https://github.com/nasirabubakar-dev/NasirWorld.git
-   ```
 
-2. **Open the project folder**
-   ```bash
+2. Open the project folder:
    cd NasirWorld
-   ```
 
-3. **Install dependencies**
-   ```bash
+3. Install dependencies:
    npm install
-   ```
 
-4. **Start the development server**
-   ```bash
+4. Start the development server:
    npm run dev
-   ```
 
-5. Open the local URL shown in your terminal.
+5. Open the local URL shown in the terminal.
 
-## 📦 Build for Production
+## Production Build
 
-Create a production build with:
+Create a production build:
+   npm run build
 
-```bash
-npm run build
-```
+Preview the build locally:
+   npm run preview
 
-To preview the production build locally:
+## Project Structure
 
-```bash
-npm run preview
-```
+- src/components/ — reusable page sections and interface components
+- src/data/ — project, service, skill, FAQ, and contact content
+- src/lib/ — shared helpers such as icon mapping
+- public/ — static images and favicon
 
-## 🎯 Purpose
+## Notes
 
-NasirWorld is my personal developer portfolio and a practical project for building and presenting modern web experiences while strengthening my frontend and software engineering skills.
+Project descriptions distinguish concept demonstrations from verified client outcomes. Service prices are starting points; final scope and pricing are confirmed before work begins. Backend, database, authentication, payment, and third-party integrations are assessed and quoted separately when required.
 
-## 👨‍💻 Author
+## Author
 
 **Nasir Abubakar**
 
@@ -77,4 +72,4 @@ NasirWorld is my personal developer portfolio and a practical project for buildi
 
 ---
 
-**Learn → Build → Improve → Make an Impact**
+**Understand → Build → Improve → Make an Impact**

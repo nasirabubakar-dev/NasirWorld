@@ -4,6 +4,7 @@ import About from './components/About.jsx';
 import Skills from './components/Skills.jsx';
 import FeaturedProjects from './components/FeaturedProjects.jsx';
 import AdditionalProjects from './components/AdditionalProjects.jsx';
+import BuildingNow from './components/BuildingNow.jsx';
 import Services from './components/Services.jsx';
 import FAQ from './components/FAQ.jsx';
 import Contact from './components/Contact.jsx';
@@ -19,6 +20,7 @@ export default function App() {
         <Skills />
         <FeaturedProjects />
         <AdditionalProjects />
+        <BuildingNow />
         <Services />
         <FAQ />
         <Contact />
