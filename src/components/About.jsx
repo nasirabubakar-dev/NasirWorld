@@ -2,21 +2,9 @@ import { Code2, Lightbulb, Rocket } from 'lucide-react';
 import Reveal from './Reveal.jsx';
 
 const values = [
-  {
-    icon: Code2,
-    title: 'Understand the Why',
-    description: 'Look beyond getting code to work and understand how the pieces fit together.',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Solve Real Problems',
-    description: 'Understand the problem first, then work toward a practical, useful solution.',
-  },
-  {
-    icon: Rocket,
-    title: 'Learn by Building',
-    description: 'Turn new knowledge into projects, learn from what works, and keep improving.',
-  },
+  { icon: Code2, title: 'Think in Systems', description: 'Understand how interfaces, APIs, application logic, and data work together.' },
+  { icon: Lightbulb, title: 'Solve Useful Problems', description: 'Start with the real need, then choose a practical solution instead of adding complexity.' },
+  { icon: Rocket, title: 'Learn by Building', description: 'Turn new knowledge into working projects, review what can improve, and keep iterating.' },
 ];
 
 export default function About() {
@@ -25,32 +13,26 @@ export default function About() {
       <div className="container-narrow">
         <Reveal className="text-center">
           <span className="eyebrow">About Me</span>
-          <h2 className="heading-lg text-ink-primary">
-            A Developer Driven by <span className="text-gradient">Curiosity and Growth</span>
-          </h2>
+          <h2 className="heading-lg text-ink-primary">A developer focused on <span className="text-gradient">how things work</span></h2>
           <div className="section-line mt-6" />
         </Reveal>
-
         <div className="mx-auto mt-12 max-w-3xl">
           <Reveal delay={100}>
             <p className="body-lg text-center">
-              I'm a web developer who enjoys understanding how things work and turning ideas into
-              practical digital experiences. My journey started with curiosity about the websites I
-              used, and it has grown into a commitment to learning, building, and solving problems
-              through code.
+              I&apos;m Nasir Abubakar, a full-stack developer and problem-solver in progress. My work spans
+              frontend interfaces and backend fundamentals, with a focus on connecting the pieces into useful,
+              understandable web applications.
             </p>
           </Reveal>
-
           <Reveal delay={180}>
             <p className="body-lg mt-5 text-center">
-              I believe becoming a better developer means going beyond making things work. It means
-              understanding the problem, writing code that makes sense, paying attention to the user
-              experience, and learning from every project. I'm continually strengthening my skills
-              and applying what I learn to build better websites and more interactive applications.
+              I care about more than making a page look right or getting code to run. I want to understand
+              the problem, make thoughtful technical choices, and build experiences that are clear for the
+              people using them. Alongside web development, I&apos;m exploring AI product development and
+              creative browser-based tools through hands-on projects.
             </p>
           </Reveal>
         </div>
-
         <div className="mt-14 grid gap-5 sm:grid-cols-3">
           {values.map((value, i) => {
             const Icon = value.icon;

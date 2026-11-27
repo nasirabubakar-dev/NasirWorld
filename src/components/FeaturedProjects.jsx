@@ -7,17 +7,14 @@ export default function FeaturedProjects() {
     <section id="projects" className="section-pad">
       <div className="container-narrow">
         <Reveal className="text-center">
-          <span className="eyebrow">Featured Projects</span>
-          <h2 className="heading-lg text-ink-primary">
-            Projects That Turn Ideas Into <span className="text-gradient">Experiences</span>
-          </h2>
+          <span className="eyebrow">Selected Work</span>
+          <h2 className="heading-lg text-ink-primary">Projects with <span className="text-gradient">purpose and process</span></h2>
           <div className="section-line mt-6" />
           <p className="body-lg mx-auto mt-5 max-w-2xl">
-            These projects showcase how I approach website design, frontend development, and the
-            process of turning ideas into working web experiences.
+            A closer look at selected builds: the need each project addresses, the approach I took,
+            and the features I implemented. These are demonstrations of my work, not claims of client results.
           </p>
         </Reveal>
-
         <div className="mt-12 space-y-6">
           {featuredProjects.map((project, i) => (
             <Reveal key={project.id} delay={i * 120}>
