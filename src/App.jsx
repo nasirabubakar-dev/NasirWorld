@@ -12,7 +12,7 @@ import Footer from './components/Footer.jsx';
 
 export default function App() {
   return (
-    <>
+    <div className="site-shell">
       <Navbar />
       <main>
         <Hero />
@@ -26,6 +26,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
