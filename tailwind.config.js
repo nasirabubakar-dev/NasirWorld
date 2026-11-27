@@ -5,13 +5,13 @@ export default {
     extend: {
       colors: {
         base: {
-          bg: '#0B1020',
-          surface: '#111827',
-          elevated: '#1E293B',
+          bg: '#070B14',
+          surface: '#0D1322',
+          elevated: '#121A2B',
         },
         accent: {
-          primary: '#7C3AED',
-          'primary-hover': '#6D28D9',
+          primary: '#8B5CF6',
+          'primary-hover': '#7C3AED',
           secondary: '#22D3EE',
           'secondary-hover': '#06B6D4',
         },
@@ -24,12 +24,8 @@ export default {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
-      maxWidth: {
-        section: '1120px',
-      },
-      transitionTimingFunction: {
-        smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
-      },
+      maxWidth: { section: '1120px' },
+      transitionTimingFunction: { smooth: 'cubic-bezier(0.4, 0, 0.2, 1)' },
     },
   },
   plugins: [],
